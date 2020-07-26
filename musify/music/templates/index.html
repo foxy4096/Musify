@@ -1,0 +1,32 @@
+<head><title>Home</title>
+  <link rel="icon" href="icon.png" type="image/png"></head>
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="container-fluid">
+ <h2>Today's Recomended</h2>
+</div>
+<br>
+{% for music in music %}
+<div class= "container-fluid">
+  <div class="row" >
+    <div class="col-sm">
+      <ul class="list-unstyled">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded align-baseline border border-light user-select-none">
+          <li class="media">
+            <img src="{{ music.image }}" height="200" class="mr-3 mx-20 rounded border border-light" alt="{{ music.name }}" >
+              <div class="media-body" >
+                <a href="/music/{{ music.id }}" id = "qv{{ music.id }}">
+                  <h3 class="mt-0 mb-1">{{ music.name }}</h3></a>
+                  <h4>Category: {{music.category}}</h4>
+                    <h5>{{ music.desc }}</h5>
+                      <h6>{{ music.date }}</h6>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+{% endfor %}
+{% endblock %}

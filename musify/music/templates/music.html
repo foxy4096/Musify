@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+  <title>You Are Listening To {{ music1.name }}</title>
+  <link rel="shortcut icon" href="{{music1.image}}" class="rounded-circle" type="image/png">
+</head>
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <img src="{{music1.image}}" height="300" alt="{{ music1.name }}" class = "rounded">
+      <h1 class="display-3">{{music1.name}}</h1>
+      <h4>Category: {{music1.category}}</h4>
+      <p>{{ music1.desc }}</p>
+      <audio src="{{music1.audio}}" controls></audio>
+    </div>
+  </div>
+</main>
+{% endblock %}
