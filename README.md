@@ -1,3 +1,8 @@
+<h1>Attention This Site is Hacked so I've Closed this</h1>
+
+
+
+
 # Musify
 Django Project hosted on Python Anywhere
 Well recently I was listening some music on Spotify™, And I got an Idea that can I make it ?
