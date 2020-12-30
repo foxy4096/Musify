@@ -1,11 +1,13 @@
-<h1>Attention This Site is Hacked so I've Closed this</h1>
+<h1>Attention Project Closed</h1>
 
 
-
-
+<pre>
+<del>
 # Musify
 Django Project hosted on Python Anywhere
 Well recently I was listening some music on Spotify™, And I got an Idea that can I make it ?
 So I started writing code and scrolling through stackoverflow(As everyone does 😉).
 And actually Now I have hosted this Django Web App on Python Anywhere. link = http://adityapriyadarshi669.pythonanywhere.com/
 That's it. Bye for now.
+</del>
+</pre>
