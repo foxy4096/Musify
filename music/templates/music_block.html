@@ -1,0 +1,19 @@
+{% load humanize %}
+
+
+<div class="card m-3 border-{% cycle 'primary' 'success' 'danger' 'info' 'light' 'dark' %}" style="max-width: screen;">
+    <div class="row g-0">
+      <div class="col-md-2">
+        <img src="{{ music.image }}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-10">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/music/{{ music.id }}" id="qv{{ music.id }}">
+              <h3 class="mt-0 mb-1">{{ music.name }}</h3>
+            </a></h5>
+          <p class="card-text">{{ music.desc|truncatechars_html:250 }}</p>
+          <p class="card-text"><small class="text-muted" title="{{ music.date }}">{{ music.date | naturaltime }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>

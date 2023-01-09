@@ -1,24 +1,18 @@
 {% extends 'base.html' %}
+<head>
+  <title>You Searched For {{ search.title }}</title>
+</head>
 {% block content %}
-<head><title>You Searched For {{ search.title }}</title></head>
-<h1> You Searched For <kbd>{{ search.title }}</kbd></h1>
+<div class="container">
+<h1 class="pt-3"> You Searched For: <kbd>{{ search.title }}</kbd></h1>
 {% for result in result %}
-<div class= "container-fluid">
-  <div class="row" >
+  <div class="row">
     <div class="col-sm">
       <ul class="list-unstyled">
-        <div class="music card shadow-lg p-3 mb-5 bg-white rounded align-baseline border border-dark user-select-none">
-          <li class="media">
-            <img src="{{ result.image }}" height="200" class="mr-3 mx-20 rounded border border-primary" alt="{{ result.name }}" >
-              <div class="media-body">
-                <h3 class="mt-0 mb-1"><a href="/music/{{ result.id }}" id = "qv{{ result.id }}">{{ result.name }}</a></h3>
-              <h5>{{ result.desc }}</h5>
-            </div>
-          </div>
-        </li>
+        {% include 'music_block.html' with music=result %}
       </ul>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}
 {% endblock %}
